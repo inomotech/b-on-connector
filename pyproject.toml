@@ -1,0 +1,22 @@
+[project]
+name = "b-on-connector"
+version = "0.1.0"
+description = "An example that submits mocked TCU data to the B-ON platform"
+authors = [
+    {name = "Lucian Alexandru",email = "lucian.alexandru@b-on.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter (>=1.1.1,<2.0.0)",
+    "protobuf (>=6.31.1,<7.0.0)",
+    "paho-mqtt (>=2.1.0,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "b_on_connector", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
